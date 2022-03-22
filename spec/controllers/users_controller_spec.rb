@@ -24,7 +24,7 @@ RSpec.describe 'Users', type: :request do
 end
 
 RSpec.describe 'Users', type: :feature do
-  context 'the users #index/#show pages' do
+  context 'the users pages' do
     it 'should includes the correct placeholder text' do
       visit 'users'
       expect(page).to have_text('List of Users - Root Page - action: users#index')
