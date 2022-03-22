@@ -2,26 +2,25 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   context 'GET #index' do
-   before(:example) { get user_posts_path(1) }
-   it "is a success" do
-     expect(response).to have_http_status(:ok)
-   end
-  
+    before(:example) { get user_posts_path(1) }
+    it 'is a success' do
+      expect(response).to have_http_status(:ok)
+    end
 
-   it "renders 'user posts' template" do
-     expect(response).to render_template('index')
-   end
+    it "renders 'user posts' template" do
+      expect(response).to render_template('index')
+    end
   end
 
   context 'GET #show' do
-   before(:example) { get user_post_path(1,1) }
-   it "is a success" do
-     expect(response).to have_http_status(:ok)
-   end
+    before(:example) { get user_post_path(1, 1) }
+    it 'is a success' do
+      expect(response).to have_http_status(:ok)
+    end
 
-   it "renders 'show' template" do
-     expect(response).to render_template('show')
-   end
+    it "renders 'show' template" do
+      expect(response).to render_template('show')
+    end
   end
 end
 
