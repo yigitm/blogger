@@ -1,26 +1,22 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Blogger
 
-> Description the project.
-
+> A Blog app to implement/interact with core features of Rails.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Ruby on Rails
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
-
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
 **Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
@@ -36,21 +32,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Deployment
 
-
-
 ## Authors
 
-👤 **Author1**
+👤 **Yigit Mersin**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@github](https://github.com/ygtmrsn)
+- LinkedIn: [@linkedIn](linkedin.com/in/yigitmersin)
+- Twitter: [@twitter](https://twitter.com/ygtmrsn)
 
 ## 🤝 Contributing
 
