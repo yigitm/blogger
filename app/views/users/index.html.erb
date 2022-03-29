@@ -1,1 +1,7 @@
-<h1>List of Users - Root Page - action: users#index</h1>
+<% @users.each do |u| %>
+  <ul>
+    <li><%= u.photo %><li>
+    <li><%= u.name %></li>
+    <li>Number of posts:<%= u.posts_counter %></li>
+  </ul>
+<% end %>
