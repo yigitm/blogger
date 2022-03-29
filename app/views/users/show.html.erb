@@ -1,1 +1,12 @@
-<h1>Single User Page - action: users#show</h1>
+<div class='container-users'>
+    <%= image_tag @user.photo %>
+    <ul>
+      <li class='user-name'><%= @user.name %></li>
+      <li>Number of posts:<%= @user.posts_counter %></li>
+    </ul>
+</div>
+
+<div class="bio frame">
+  <h2>Bio</h2>
+  <%= @user.bio %>
+</div>
