@@ -4,12 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show 
-    @user = User.find(params[:id])
-  end
-
-  private
-
-  def user_params
-    params.require(:user).permit(:id, :name, :photo, :bio, :post_counter)
+    @user = User.find(params[:id]) if params.permit
   end
 end
