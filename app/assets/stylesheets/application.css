@@ -51,3 +51,23 @@ ul li {
 .frame {
   border: solid 2px black;
 }
+
+.user-posts {
+  display: flex;
+  margin: 1em 0 1em;
+  padding: 0.5em;
+  flex-direction: column;
+}
+
+.post-title {
+  font-weight: bolder;
+}
+
+.post-counters {
+  align-self: flex-end;
+  display: flex;
+}
+
+.post-c-counter {
+  margin-right: 1em;
+}
