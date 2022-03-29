@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+.container-users {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  margin-bottom: 2em;
+  width: 10em;
+  height: 10em;
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+}
+
+.user-name {
+  font-size: 320%;
+  padding-right: 10em;
+}
