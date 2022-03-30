@@ -1,1 +1,9 @@
-<h1>List of Users - Root Page - action: users#index</h1>
+<% @users.each do |u| %>
+  <div class='container-users'>
+    <%= image_tag u.photo %>
+    <div class='user-content frame'>
+      <h1><%= u.name %></h1>
+      <h3 class='post-counter'>Number of posts:<%= u.posts_counter %></h3>
+    </div>
+  </div>
+<% end %>

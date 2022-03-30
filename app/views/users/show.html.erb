@@ -1,1 +1,25 @@
-<h1>Single User Page - action: users#show</h1>
+<%= render 'shared/single_user' %>
+
+<div class='bio frame'>
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</div>
+
+
+  <%= render 'shared/recent_posts' %>
+ 
+  <button>
+  <%= link_to 'See all posts', user_posts_path(@user) %>
+  </button>
+  
+  
+ 
+ 
+
+  
+
+
+
+  
+
+
