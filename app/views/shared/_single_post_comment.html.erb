@@ -1,0 +1,14 @@
+<% if @post.comments_counter > 0 %>
+  <div class='comment-container frame'>
+  <% Post.recent_comments(@post.id).each do |c| %>
+     <div class='comments'>
+      <p>Username: <%= c.author.name %></p>
+      <p>Comment: <%= c.text %></p>
+    </div>
+  <% end %>
+  </div>
+  
+  <%else%>
+  <p class="no_comment frame">No comments yet</p>
+
+<% end %>

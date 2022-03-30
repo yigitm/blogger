@@ -1,0 +1,12 @@
+<div class='user-post frame'>
+  <div class='post-head'>
+     <p class='post-title'><%= @post.title %> by <%= @post.author.name %></p>
+   
+    <div class='post-counters'>
+     <p class='post-c-counter'>Comments: <%= @post.comments_counter %></p>
+     <p class='post-l-counter'>Likes: <%= @post.likes_counter %></p>
+   </div>
+  </div>
+ 
+   <p class='post-text'><%= @post.text %></p>
+  </div>
