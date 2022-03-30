@@ -1,7 +1,7 @@
 <div class='container-users'>
     <%= image_tag @user.photo %>
-    <ul>
-      <li class='user-name'><%= @user.name %></li>
-      <li>Number of posts:<%= @user.posts_counter%></li>
-    </ul>
+    <div class='user-content frame'>
+      <h1><%= @user.name %></h1>
+      <h3 class='post-counter'>Number of posts:<%= @user.posts_counter %></h3>
+    </div>
 </div>
