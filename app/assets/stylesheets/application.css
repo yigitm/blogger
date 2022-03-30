@@ -13,10 +13,18 @@
  *= require_tree .
  *= require_self
  */
-.container-users {
+.container-users,
+.container-user-post {
   display: flex;
-  justify-content: space-between;
   margin: 1em 0;
+}
+
+.container-users {
+  justify-content: space-evenly;
+}
+
+.container-user-post {
+  justify-content: space-between;
 }
 
 img {
