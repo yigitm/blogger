@@ -7,12 +7,20 @@
      <p class='post-l-counter'>Likes: <%= p.likes_counter %></p>
    </div>
   </div>
+
+<% if p.comments_counter > 0 %>
   <div class='comment-container frame'>
   <% Post.recent_comments(p.id).each do |c| %>
-   <div class='comments'>
-    <p>Username: <%= c.author.name %></p>
-    <p>Comment: <%= c.text %></p>
-   </div>
+     <div class='comments'>
+      <p>Username: <%= c.author.name %></p>
+      <p>Comment: <%= c.text %></p>
+    </div>
   <% end %>
   </div>
-  <% end %>
+  
+  <%else%>
+  <p class="no_comment frame">No comments yet</p>
+
+<% end %>
+
+<% end %>
