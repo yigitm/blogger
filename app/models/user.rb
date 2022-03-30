@@ -6,4 +6,8 @@ class User < ApplicationRecord
   def self.recent_posts(user)
     Post.where('author_id = ?', user.id).order(id: :desc).limit(3)
   end
+
+  def self.all_posts(user)
+    Post.where('author_id = ?', user.id).order(id: :desc)
+  end
 end

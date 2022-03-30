@@ -1,4 +1,4 @@
-<% User.recent_posts(@user).each do |p| %>
+<% User.all_posts(@user).each do |p| %>
   <div class='user-posts frame'>
    <p class='post-title'><%= p.title %></p>
    <p class='post-text'><%= p.text%></p>
