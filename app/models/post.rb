@@ -7,7 +7,7 @@ class Post < ApplicationRecord
     author.increment!(:posts_counter)
   end
 
-  def self.recent_comments(post)
-    Comment.where('post_id = ?', post.id).order(id: :desc).limit(5)
+  def self.recent_comments(post_id)
+    Comment.where('post_id = ?', post_id).order(id: :desc).limit(5)
   end
 end
