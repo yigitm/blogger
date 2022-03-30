@@ -15,13 +15,12 @@
  */
 .container-users {
   display: flex;
-  margin: 1em;
   align-items: center;
   justify-content: space-evenly;
+  margin: 1em 0;
 }
 
 img {
-  margin-bottom: 2em;
   width: 10em;
   height: 10em;
 }
@@ -30,14 +29,17 @@ ul {
   padding: 2em;
 }
 
-ul li {
-  display: inline;
-  list-style: none;
+.user-content {
+  width: 70%;
+  height: 10em;
 }
 
-.user-name {
-  font-size: 320%;
-  padding-right: 10em;
+.username {
+}
+
+.post-counter {
+  text-align: end;
+  margin-right: 1em;
 }
 
 .bio {
