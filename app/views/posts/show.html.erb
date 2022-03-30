@@ -1,1 +1,28 @@
-<h1>User Single Post Page - action: posts#show</h1>
+  <div class='user-post frame'>
+  <div class='post-head'>
+     <p class='post-title'><%= @post.title %> by <%= @post.author.name %></p>
+   
+    <div class='post-counters'>
+     <p class='post-c-counter'>Comments: <%= @post.comments_counter %></p>
+     <p class='post-l-counter'>Likes: <%= @post.likes_counter %></p>
+   </div>
+  </div>
+ 
+   <p class='post-text'><%= @post.text %></p>
+  </div>
+
+
+<% if @post.comments_counter > 0 %>
+  <div class='comment-container frame'>
+  <% Post.recent_comments(@post.id).each do |c| %>
+     <div class='comments'>
+      <p>Username: <%= c.author.name %></p>
+      <p>Comment: <%= c.text %></p>
+    </div>
+  <% end %>
+  </div>
+  
+  <%else%>
+  <p class="no_comment frame">No comments yet</p>
+
+<% end %>

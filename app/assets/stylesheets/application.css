@@ -88,10 +88,29 @@ button a {
 
 .comments {
   display: flex;
-  padding-left: 0.5em;
+  padding: 0.5em;
+}
+
+.comments > p {
+  margin-right: 0.5em;
 }
 
 .no_comment {
   padding: 2em;
   text-align: center;
+}
+
+.user-post,
+.post-head {
+  display: flex;
+}
+
+.user-post {
+  margin: 1em 0 1em;
+  padding: 0.5em;
+  flex-direction: column;
+}
+
+.post-head {
+  justify-content: space-between;
 }
