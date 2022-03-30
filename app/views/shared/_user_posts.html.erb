@@ -1,12 +1,4 @@
-<%= render 'shared/single_user' %>
-
-<div class='bio frame'>
-  <h2>Bio</h2>
-  <p><%= @user.bio %></p>
-</div>
-
-
-  <% User.recent_posts(@user).each do |p| %>
+<% @user.posts.all.each do |p| %>
   <div class='user-posts frame'>
    <p class='post-title'><%= p.title %></p>
    <p class='post-text'><%= p.text%></p>
@@ -15,20 +7,4 @@
      <p class='post-l-counter'>Likes: <%= p.likes_counter %></p>
    </div>
   </div>
-  <% end %>
- 
-  <button>
-  <%= link_to 'See all posts', user_posts_path(@user) %>
-  </button>
-  
-  
- 
- 
-
-  
-
-
-
-  
-
-
+<% end %>
