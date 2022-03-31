@@ -1,15 +1,17 @@
 class CommentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
-    @post = Post.find(params[:post_id])
-    @comment = Comments.new(comment_params)
-    @comment.author_id = @user.id
+    @post = Post.find(params[:id])
+    @comment = Comment.new(comment_params)
+    @comment.author_id = current_user.id
     @comment.post_id = @post.id
 
+    
+
     if @comment.save
-        redirect_to user_posts_path(@user.id)
+        redirect_to user_post_path(current_user.id, @post.id)
       else
-        render :new
+        render user_post_path(current_user.id, @post.id), alert: "Comments not created!"
     end
   end
 

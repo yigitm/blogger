@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = current_user.posts.find(params[:id])
-    @user = User.find(params[:user_id])
+    @user = current_user
     @comments = @post.comments
   end
 
@@ -23,8 +23,7 @@ class PostsController < ApplicationController
       if @post.save
         redirect_to user_posts_path(current_user.id)
       else
-        flash[:notice] = 'Error!'
-        render :new
+        redirect_to user_posts_path(current_user.id), alert: "Posts not created!"
       end
   end
   
