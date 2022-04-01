@@ -5,8 +5,6 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
   end
   post '/users/:user_id/posts/:id' , to: 'comments#create'
-  #resources :likes, only: [:create]
-  #match '/users/:user_id/posts/:id', to: 'likes#create', via: [:post]
   # Defines the root path route ("/")
   root to:"users#index"
 end
