@@ -20,6 +20,8 @@ class Post < ApplicationRecord
   end
 
   def self.recent_comments(post_id)
-    Comment.where('post_id = ?', post_id).order(id: :desc).limit(5)
+    Comment.includes(:author).each do
+      Comment.where('post_id = ?', post_id).order(id: :desc).limit(5)
+    end
   end
 end
