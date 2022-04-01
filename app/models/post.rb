@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   after_save :update_post_counter
   after_initialize :init
 
+  validates :title, presence: true, length: { in: 1..250 }
+
   def init
     self.comments_counter ||= 0 # will set the default value only if it's nil
     self.likes_counter ||= 0 # will set the default value only if it's nil
