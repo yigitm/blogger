@@ -21,15 +21,16 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
 
-      if @post.save
-        redirect_to user_posts_path(current_user.id)
-      else
-        redirect_to user_posts_path(current_user.id), alert: "Posts not created!"
-      end
-  end
-  
-  private
-    def post_params
-      params.require(:post).permit(:title, :text)
+    if @post.save
+      redirect_to user_posts_path(current_user.id)
+    else
+      redirect_to user_posts_path(current_user.id), alert: 'Posts not created!'
     end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end

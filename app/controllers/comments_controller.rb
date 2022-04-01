@@ -5,17 +5,16 @@ class CommentsController < ApplicationController
     @comment.author_id = current_user.id
     @comment.post_id = @post.id
 
-    
-
     if @comment.save
-        redirect_to user_post_path(current_user.id, @post.id)
-      else
-        render user_post_path(current_user.id, @post.id), alert: "Comments not created!"
+      redirect_to user_post_path(current_user.id, @post.id)
+    else
+      render user_post_path(current_user.id, @post.id), alert: 'Comments not created!'
     end
   end
 
   private
-    def comment_params
-      params.require(:comment).permit(:text)
-    end
+
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 end
