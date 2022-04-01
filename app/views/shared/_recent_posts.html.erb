@@ -2,6 +2,8 @@
   <div class='user-posts frame'>
    <p class='post-title'><%= p.title %></p>
    <p class='post-text'><%= p.text%></p>
+   <% @post = p.id %>
+
    <div class='post-counters'>
      <p class='post-c-counter'>Comments: <%= p.comments_counter %></p>
      <p class='post-l-counter'>Likes: <%= p.likes_counter %></p>
