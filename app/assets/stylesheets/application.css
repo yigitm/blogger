@@ -124,3 +124,13 @@ button a {
 .like {
   margin-bottom: 2em;
 }
+
+h1,
+h3 {
+  margin-left: 1em;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(38, 38, 235);
+}
