@@ -20,15 +20,7 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'name should be present' do
-    expect(subject).to be_valid
-  end
-
-  it 'posts counter should be integer' do
-    expect(subject).to be_valid
-  end
-
-  it 'posts counter should be >= 0' do
+  it 'subject should be valid' do
     expect(subject).to be_valid
   end
 end
