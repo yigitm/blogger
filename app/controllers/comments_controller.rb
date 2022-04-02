@@ -10,9 +10,9 @@ class CommentsController < ApplicationController
     @comment.post_id = @post.id
 
     if @comment.save
-      redirect_to user_post_path(current_user.id, @post.id)
+      redirect_to user_post_path(current_user.id, @post.id), alert: 'Comment is created!'
     else
-      render user_post_path(current_user.id, @post.id), alert: 'Comments not created!'
+      render user_post_path(current_user.id, @post.id), alert: 'Comment is not created!'
     end
   end
 

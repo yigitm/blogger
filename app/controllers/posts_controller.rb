@@ -22,9 +22,9 @@ class PostsController < ApplicationController
     @post.likes_counter = 0
 
     if @post.save
-      redirect_to user_posts_path(current_user.id)
+      redirect_to user_posts_path(current_user.id), notice: 'Post is created!'
     else
-      redirect_to user_posts_path(current_user.id), alert: 'Posts not created!'
+      redirect_to user_posts_path(current_user.id), alert: 'Post is not created!'
     end
   end
 

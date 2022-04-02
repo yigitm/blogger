@@ -6,8 +6,7 @@ class LikesController < ApplicationController
     @like.post_id = @post.id
     @like.author_id = current_user.id
 
-    flash[:notice] = 'Liked it!' if @like.save
-    redirect_to user_post_path(current_user.id, @post.id)
+    redirect_to user_post_path(current_user.id, @post.id), notice: 'Liked it!' if @like.save
   end
 
   def find_post
