@@ -20,12 +20,6 @@ class Post < ApplicationRecord
   end
 
   def self.recent_comments(post)
-    Post.includes(:author).each do
-      post.comments.order(id: :desc).limit(5)
-    end
-  end
-
-  def self.comments_for_single_post(post)
-    post.comments.order(id: :desc).limit(5)
+    post.comments.order(id: :desc).limit(5).eager_load(:author)
   end
 end

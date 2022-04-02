@@ -1,6 +1,6 @@
 <% if @post.comments_counter > 0 %>
   <div class='comment-container frame'>
-  <% Post.comments_for_single_post(@post).each do |c| %>
+  <% Post.recent_comments(@post).each do |c| %>
      <div class='comments'>
       <p>Username: <%= c.author.name %></p>
       <p>Comment: <%= c.text %></p>
