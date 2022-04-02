@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to user_posts_path(current_user.id)
     else
-      redirect_to user_posts_path(current_user.id), alert: 'Posts not created!'
+      redirect_to user_post_path(current_user.id), alert: 'Post not created!'
     end
   end
 
