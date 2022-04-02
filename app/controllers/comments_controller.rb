@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to user_post_path(current_user.id, @post.id)
     else
-      render user_post_path(current_user.id, @post.id), alert: 'Comments not created!'
+      redirect_to user_post_path(current_user.id, @post.id), alert: 'Comments not created!'
     end
   end
 
