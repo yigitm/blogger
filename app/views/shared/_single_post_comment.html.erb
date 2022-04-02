@@ -1,5 +1,4 @@
 <% if @post.comments_counter > 0 %>
-<%= 'hey ho'%>
   <div class='comment-container frame'>
   <% @post.recent_comments(@post).each do |c| %>
      <div class='comments'>

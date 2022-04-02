@@ -19,6 +19,12 @@ class Post < ApplicationRecord
     author.increment!(:posts_counter)
   end
 
+  def self.recent_comments(post)
+    Post.includes(:author).each do
+      post.comments.order(id: :desc).limit(5)
+    end
+  end
+
   def recent_comments(post)
     post.comments.order(id: :desc).limit(5)
   end
