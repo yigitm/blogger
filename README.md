@@ -2,49 +2,81 @@
 
 # Blogger
 
-> A Blog app to implement/interact with core features of Rails.
+> A Blog app to implement/interact with core features of Rails. For learning purpose scaffold commmand is not use. Setting model migrations/associations/queries & controller actions & view creations & nested routes & adding model unit test & fixing 'n+1' problem with bullet gem; were the some of the major subjects that practiced.
+
+![App Gif](./app/assets/images/app.gif)
 
 ## Built With
 
 - Ruby
-- Ruby on Rails
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Rails
+- Rspec
+- Bullet
+- Rubocop
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Ruby should be installed in your local machine. Please check this [article](https://www.theodinproject.com/lessons/ruby-installing-ruby) how to install/setup Ruby for different operating systems.
+
+Ruby on Rails should be installed in your local machine. Please check this [article](https://www.theodinproject.com/lessons/ruby-on-rails-installing-rails) how to install/setup Ruby for different operating systems.
+
 ### Setup
+
+To get a local copy of the repository please run the following commands on your terminal.
+
+If you are not familiar to use terminal, please check this [article](https://www.theodinproject.com/courses/web-development-101/lessons/command-line-basics-web-development-101)
 
 ### Install
 
+Open your terminal & go to your desktop.
+
+```
+cd your_desktop
+```
+
+Run below commands.
+
+```
+git clone https://github.com/yigitm/blogger.git
+```
+
 ### Usage
 
-### Run tests
+Go to the app folder.
 
-### Deployment
+```
+cd blogger
+```
+
+Run below command to install packages that app is depended to run.
+
+```
+bundle install
+```
+
+Run the local Rails server in your default browser with below command.
+
+```
+rails s
+```
 
 ## Authors
 
 👤 **Yigit Mersin**
 
-- GitHub: [@github](https://github.com/ygtmrsn)
-- LinkedIn: [@linkedIn](linkedin.com/in/yigitmersin)
-- Twitter: [@twitter](https://twitter.com/ygtmrsn)
+- GitHub: [@ygtmrsn](https://github.com/ygtmrsn)
+- Twitter: [@ygtmrsn](https://twitter.com/ygtmrsn)
+- LinkedIn: [yigitmersin](linkedin.com/in/yigitmersin)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/yigitm/blogger.git/issues).
 
 ## Show your support
 
@@ -52,9 +84,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Open source
 
 ## 📝 License
 
