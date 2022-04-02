@@ -25,7 +25,7 @@ class Post < ApplicationRecord
     end
   end
 
-  def recent_comments(post)
+  def self.comments_for_single_post(post)
     post.comments.order(id: :desc).limit(5)
   end
 end
