@@ -2,7 +2,7 @@
 
 # Blogger
 
-> A Blog app to implement/interact with core features of Rails. For learning purpose scaffold commmand is not use. Setting model migrations/associations/queries & controller actions & view creations & nested routes & adding model unit test & fixing 'n+1' problem with bullet gem; were the some of the major subjects that practiced.
+> A Blog app to implement/interact with core features of Rails. For learning purpose scaffold command is not use. Setting model migrations/associations/queries & controller actions & view creations & nested routes & adding model unit test & fixing 'n+1' problem with bullet gem; were the some of the major subjects that practiced.
 
 ![App Gif](./app/assets/images/app.gif)
 
