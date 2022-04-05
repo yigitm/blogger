@@ -2,14 +2,14 @@
 
 <div class='bio frame'>
   <h2>Bio</h2>
-  <p><%= @user.bio %></p>
+  <p><%= current_user.bio %></p>
 </div>
 
 
   <%= render 'shared/recent_posts' %>
  
   <button>
-  <%= link_to 'See all posts', user_posts_path(@user) %>
+  <%= link_to 'See all posts', user_posts_path(current_user.id) %>
   </button>
   
   

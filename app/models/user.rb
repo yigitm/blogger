@@ -12,8 +12,8 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3 }
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  def self.recent_posts(user)
-    Post.where('author_id = ?', user.id).order(id: :desc).limit(3)
+  def self.recent_posts(user_id)
+    Post.where('author_id = ?', user_id).order(id: :desc).limit(3)
   end
 
   def self.all_posts(user)

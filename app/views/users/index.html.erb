@@ -1,12 +1,9 @@
-<% @users.each do |u| %>
   <div class='container-users'>
-    <%= image_tag u.photo %>
+    <%= image_tag current_user.photo %>
     <div class='user-content frame'>
-      <h1><%= u.name %></h1>
-      <h3><%= link_to 'Go to Profile =>', user_path(u.id), class: 'link' %></h3>
-      <h3 class='post-counter'>Number of posts:<%= u.posts_counter %></h3>
+      <h1><%= current_user.name %></h1>
+      <h3><%= link_to 'Go to Profile =>', user_path(current_user.id), class: 'link' %></h3>
+      <h3 class='post-counter'>Number of posts:<%= current_user.posts_counter %></h3>
     </div>
     
   </div>
-  
-<% end %>
