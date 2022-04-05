@@ -134,3 +134,15 @@ h3 {
   text-decoration: none;
   color: rgb(38, 38, 235);
 }
+
+.w-100 {
+  width: 100%;
+}
+
+.m-40 {
+  margin: 40px;
+}
+
+.mb-5vh {
+  margin-bottom: 5vh;
+}
