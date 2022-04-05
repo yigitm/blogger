@@ -3,5 +3,7 @@
     <div class='user-content frame'>
       <h1><%= current_user.name %></h1>
       <h3 class='post-counter'>Number of posts:<%= current_user.posts_counter %></h3>
+      <%= render 'shared/log_out' %>
     </div>
+    
 </div>
