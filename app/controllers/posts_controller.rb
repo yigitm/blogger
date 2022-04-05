@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @user = current_user
     @posts = Post.last(3)
