@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'index page', type: :system do
+RSpec.describe 'user index page', type: :system do
   before(:each) do
     @user = User.create!(name: 'User Name', photo:'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', email: 'test@mail.com', password: '123456')
     @user.confirmed_at = Time.now
@@ -8,7 +8,6 @@ RSpec.describe 'index page', type: :system do
     @second_user = User.create!(name: 'Second User', photo:'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', email: 'test2@mail.com', password: '123456')
     @second_user.confirmed_at = Time.now
 
-    login_as(@user, :scope => :user)
     login_as(@user, :scope => :user)
   end
 
