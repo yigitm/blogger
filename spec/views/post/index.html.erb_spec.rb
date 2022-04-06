@@ -54,4 +54,11 @@ RSpec.describe 'user post index page', type: :system do
     visit user_posts_path(@user)
     expect(page).to have_content('Comment text')
   end
+
+  it "can see how many comments a post has" do
+    @comment = Comment.create!(author_id: @user.id, post_id: @post.id, text: 'Comment text')
+
+    visit user_posts_path(@user)
+    expect(page).to have_selector('.post-c-counter', text: 'Comments: 1')
+  end
 end
