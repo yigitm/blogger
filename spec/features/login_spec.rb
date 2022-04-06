@@ -7,7 +7,7 @@ RSpec.describe 'login', type: :feature do
   end
 
   it "can see the email and password inputs and the 'Sign In' button" do
-    visit ('/users/sign_in')
+    visit('/users/sign_in')
     login_as(@user, :scope => :user)
     click_button('Log in')
     expect(page).to have_content('test')
@@ -19,7 +19,7 @@ RSpec.describe 'login', type: :feature do
     expect(page).to have_content('Invalid Email or password.')
   end
 
-  it 'When I click the submit button after filling in the username and the password with incorrect data, I get a detailed error.' do
+  it 'click the submit button after filling in the username and the password with incorrect data, I get a detailed error.' do
     visit('/users/sign_in')
     fill_in 'Email', with: ''
     fill_in 'Password', with: ''
@@ -27,7 +27,7 @@ RSpec.describe 'login', type: :feature do
     expect(page).to have_current_path('/users/sign_in')
   end
 
-  it 'When I click the submit button after filling in the username and the password with correct data, I am redirected to the root page' do
+  it 'click the submit button after filling in the username and the password with correct data, I am redirected to the root page' do
     root = root_path
     visit('/users/sign_in')
     login_as(@user, :scope => :user)
