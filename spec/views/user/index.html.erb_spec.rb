@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'likes/create.html.erb', type: :feature do
+RSpec.describe 'index page', type: :feature do
   #pending "add some examples to (or delete) #{__FILE__}"
   scenario 'index page' do
     visit users_path
