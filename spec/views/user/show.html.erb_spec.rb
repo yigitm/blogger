@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'user show page', type: :system do
+RSpec.describe 'user show page', type: :feature do
   before(:each) do
     @user = User.create!(name: 'User Name', bio:'User bio. text', photo:'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', email: 'test@mail.com', password: '123456')
     @user.confirmed_at = Time.now
