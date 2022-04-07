@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'user show page', type: :feature do
+RSpec.describe 'user show page', type: :system do
   before(:each) do
     # rubocop:disable Layout/LineLength
     @user = User.create!(name: 'User Name', bio: 'User bio. text',
@@ -53,6 +53,6 @@ RSpec.describe 'user show page', type: :feature do
   it "click to see all posts, it redirects to the user's post's index page" do
     visit user_path(@user)
     click_button 'See all posts'
-    expect(page).to have_current_path(user_posts_path(@user))
+    expect(page).to have_current_path("/users/#{@user.id}/posts")
   end
 end
