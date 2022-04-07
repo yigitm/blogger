@@ -35,19 +35,19 @@ RSpec.describe 'user show page', type: :system do
     expect(all('p', text: 'Post text.').count).to eq(3)
   end
 
-  it "can see a button that lets me view all of a user's posts" do
+  it "can see a button that lets to view all of a user's posts" do
     visit user_path(@user)
     expect(page).to have_button('See all posts')
   end
 
-  it "click a user's post, it redirects me to that post's show page" do
+  it "click a user's post, it redirects to that post's show page" do
     @post = Post.create!(author_id: @user.id, title:'Post', text: 'Post text.')
     visit user_path(@user)
     click_on 'Post'
     expect(page).to have_current_path(user_posts_path(@user))
   end
 
-  it "click to see all posts, it redirects me to the user's post's index page" do
+  it "click to see all posts, it redirects to the user's post's index page" do
     visit user_path(@user)
     click_button 'See all posts'
     expect(page).to have_current_path(user_posts_path(@user))

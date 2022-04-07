@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'user post index page', type: :system do
+RSpec.describe 'user post index page', type: :feature do
   before(:each) do
     @user = User.create!(name: 'User Name', photo:'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', email: 'test@mail.com', password: '123456')
     @user.confirmed_at = Time.now
@@ -60,5 +60,21 @@ RSpec.describe 'user post index page', type: :system do
 
     visit user_posts_path(@user)
     expect(page).to have_selector('.post-c-counter', text: 'Comments: 1')
+  end
+
+  it "can see how many likes a post has" do
+    visit user_posts_path(@user)
+    expect(page).to have_content('Likes')
+  end
+
+  it "can see a section for pagination if there are more posts than fit on the view" do
+    visit user_posts_path(@user)
+    expect(page).to have_button('pagination')
+  end
+
+  it "click on a post, it redirects to that post's show page" do
+    visit user_posts_path(@user)
+    click_on 'Post title'
+    expect(page).to have_current_path(user_post_path(@user, @post))
   end
 end
